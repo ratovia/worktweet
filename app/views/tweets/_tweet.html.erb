@@ -1,0 +1,10 @@
+<div class="tweet">
+  <div class="date">
+    <%= tweet.metadata.to_s.split.first %>
+  </div>
+  <div class="tweet-box">
+    <%= image_tag(tweet.image_url, class: "summary_image") unless tweet.image_url.nil?%>
+    <h4><%= tweet.title %></h4>
+    <p><%= tweet.summary %></p>
+  </div>
+</div>

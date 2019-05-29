@@ -1,0 +1,2 @@
+module KogaHelper
+end

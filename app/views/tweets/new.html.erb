@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="form">
+    <h1>New Work</h1>
+    <%= form_tag('/tweets', method: :post) do %>
+      <div class="field">
+        <label for="title">タイトル</label>
+        <input type="text" name="title" value="">
+      </div>
+      <div class="field">
+        <label for="metadata">公開日</label>
+        <input type="date" name="metadata" value="">
+      </div>
+      <div class="field">
+        <label for="summary">概要</label>
+        <input type="text" name="summary" value="">
+      </div>
+      <div class="field">
+        <label for="contents">説明</label>
+        <input type="text" name="contents" value="">
+      </div>
+      <div class="field">
+        <label for="site_url">サイトURL</label>
+        <input type="text" name="site_url" value="">
+      </div>
+      <div class="field">
+        <label for="image_url">画像イメージ</label>
+        <input type="text" name="image_url" value="">
+      </div>
+      <div class="actions">
+        <input type="submit" value="新規登録">
+      </div>
+    <% end %>
+  </div>
+</div>

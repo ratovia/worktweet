@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Worktweet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-blank"></div>
+        <% if user_signed_in? %>
+          <h2 class="header-logo">
+            <%= link_to("Worktweet","/") %>
+          </h2>
+          <div class="header-menu">
+            <%= link_to "ログアウト",destroy_user_session_path,method: :delete ,class: "header-btn negative-btn"%>
+            <%= link_to "新規投稿", "/tweets/new" , class: "header-btn positive-btn"%>
+          </div>
+        <% else %>
+          <h2 class="header-name">
+            <%= link_to("Ryuji's Portfolio","/") %>
+          </h2>
+        <% end %>
+      </header>
+      <div class="main">
+        <%= yield %>
+      </div>
+      <footer>
+        <%= link_to "ログイン",new_user_session_path, class: "footer-btn"%>
+      </footer>
+    </div>
+  </body>
+</html>

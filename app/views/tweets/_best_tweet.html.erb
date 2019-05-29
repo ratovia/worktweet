@@ -1,0 +1,14 @@
+<div class="tweet-best">
+  <div class="tweet-box-best">
+    <div class="left-contents">
+      <%= image_tag(tweet.image_url, class: "best_image") unless tweet.image_url.nil?%>
+    </div>
+    <div class="right-contents">
+      <h4><%= tweet.title %></h4>
+      <p><%= tweet.contents %></p>
+      <%= link_to "詳細", "/tweets/#{tweet.id}",class: "link-btn" %>
+      <%= link_to "サイトに行く", "/",class: "link-btn" unless tweet.site_url.nil? %>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

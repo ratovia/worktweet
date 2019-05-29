@@ -1,0 +1,79 @@
+<section class="profile bg-fixed-image">
+  <div class="container">
+    <%= image_tag("profile.jpg", class: "avatar image-rotate")  %>
+    <div class="profile-box">
+      <%# <%= simple_format "古城戸隆志" %>
+      <% text = "元インフラエンジニア 4月に退職。WebエンジニアになるためTech::Expertで５月から勉強中。大阪53期生です。心を和やかにするWebサービスを提供します。 スキル：HTML/CSS, Ruby, Ruby on Rails 趣味：ワイン 人生最終目標：ワインとプログラミングを掛け合わせる" %>
+      <%= simple_format text %>
+      <%= Tweet.tweet_countB %>
+      <%= Tweet.count %>
+      <%= Tweet.all.length %>
+      <%= @tweets.length %>
+    </div>
+  </div>
+</section>
+<section class="skills">
+  <div class="container">
+    <h1>Skills</h1>
+    <div class="skills">
+      <% @skills.each do |key,value|%>
+        <% skill = Skill.find(key) %>
+        <div class="skill">
+          <div>
+            <%= image_tag skill.image,class: "skill-image image-rotate" %>
+            <div class="skill-mask">
+              <div class="skill-caption">
+                <%= skill.name %><br>
+                作品数：<%= value %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="best-works bg-fixed-image">
+  <div class="container">
+    <h1>⭐️ Best Work ⭐️</h1>
+    <div class="tweets-best">
+      <% @best_tweets.each do |tweet| %>
+        <%= render partial: "tweets/best_tweet", locals: {tweet: tweet} %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="works">
+  <div class="container">
+    <h1>Works</h1>
+    <div class="tweets">
+      <% @tweets.each do |tweet| %>
+        <a href="/tweets/<%= tweet.id %>">
+          <%= render partial: "tweets/tweet", locals: {tweet: tweet} %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="Blog">
+  <div class="container">
+    <h1>Blog</h1>
+    <div class="blog-information">
+      <a href="https://timeofmagazin.work/" class="blog-title">Time of Magazin</a>
+      <div>大学の友人と運用しているブログです。サーバやプログラミング、ゲームの情報を発信しています。</div>
+      <a href="https://timeofmagazin.work/">
+        <%= image_tag("timeofmagazin.png",class: "blog-page-image")%>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="container">
+    <h1>Contact by Twitter</h1>
+    <div class="twitter">
+      <a class="twitter-timeline" data-height="600" href="https://twitter.com/Ryuji_tech?ref_src=twsrc%5Etfw">Tweets by Ryuji_tech</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    </div>
+    </div>
+  </div>
+</section>
+
+

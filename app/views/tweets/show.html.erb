@@ -1,0 +1,71 @@
+<section class="work-information">
+  <div class="container">
+    <h2>作品情報</h2>
+    <div class="left-contents">
+      <%= image_tag(@tweet.image_url,class: "work-information-image")%>
+      <div class="tags">
+        <% @tweet.skills.each do |skill|%>
+          <div class="tag">
+            <span class="tag
+            -left">
+              使用スキル
+            </span>
+            <span class="tag-right">
+              <%= skill.name %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="right-contents">
+      <h2 class="contents-title"><%= @tweet.title%></h2>
+      <p>公開日 : <%= @tweet.metadata.to_s.split.first %></p>
+      <%= simple_format @tweet.contents ,class: "contents-text"%>
+    </div>
+  </div>
+</section>
+<hr>
+<section class="aside-infomation">
+  <div class="container">
+    <div class="left-contents">
+        <h2>コメント</h2>
+        <div class="form">
+          <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post,class: "comment-form") do %>
+          <div class="field">
+            <label for="nickname">ニックネーム</label>
+            <input type="text" name="nickname">
+          </div>
+          <div class="field">
+            <label for="contents">コメント</label>
+            <input type="text" name="contents">
+          </div>
+          <div class="actions">
+            <input type="submit" value="送信">
+          </div>
+          <% end %>
+        </div>
+        <% if @comments then %>
+          <hr>
+          <div class="comment-list">
+            <% @comments.each do |comment| %>
+              <%= comment.created_at.to_s.split.first %>：
+              <%= comment.nickname %>：
+              <%= comment.contents %>
+              <br>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+    <div class="right-contents">
+        <h2>課題</h2>
+    </div>
+  </div>
+</section>
+
+<% if user_signed_in? && @tweet.user.id == current_user.id then %>
+  <hr>
+  <div class="meta-infomation">
+    <%= link_to("編集","/tweets/#{@tweet.id}/edit",class: "meta-btn positive-btn") %>
+    <%= link_to("削除","/tweets/#{@tweet.id}",method: :delete,class: "meta-btn negative-btn") %>
+  </div>
+<% end %>

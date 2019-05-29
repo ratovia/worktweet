@@ -1,0 +1,376 @@
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.wrapper{
+  padding:0;
+  margin:0;
+  width: 100%;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  z-index: 5;
+  width: 100%;
+  height: 80px;
+  background-color: #ffd280;
+  position: fixed;
+  top:0px;
+  left:0px
+}
+
+.main{
+  background-color:#ececec;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+.header-blank{
+  float: left;
+  width: 33%;
+}
+
+.header-logo{
+  float: left;
+  width: 33%;
+  line-height: 80px;
+  margin:0;
+  padding:0px 0px 0px 30px;
+}
+.header-logo a{
+  text-decoration: none;
+  color: black;
+}
+
+.header-menu{
+  float: right;
+  width: 33%;
+  text-align:right;
+  padding-right: 30px;
+  height: 80px;
+}
+
+.header-btn{
+  border-radius: 4px;
+  /* background-color: ; */
+  text-decoration: none;
+  padding: 10px 40px;
+  line-height: 80px;
+}
+.negative-btn{
+  color: #7c7c7cc2;
+  border: 2px solid #7c7c7cc2;
+}
+
+.positive-btn{
+  color: #0051ff;
+  border: 2px solid #0051ff;
+}
+
+.header-name{
+  text-align:center;
+  line-height: 80px;
+  padding: 0;
+  margin:0;
+  font-style: italic;
+}
+.container{
+  width: 80%;
+  margin-bottom:30px;
+  padding-top: 80px;
+  margin:0 auto 30px auto;
+  min-height: calc(100vh - 80px);
+}
+
+.container h1{
+  text-align: center;
+}
+
+.tweets{
+  margin:0 auto;
+  width: 60%;
+  text-align:center;
+}
+.tweet{
+  margin-bottom: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.date{
+  padding: 10px 0px;
+}
+.tweet-box{
+  background-color: white;
+  padding: 10px;
+}
+
+.tweet:hover{
+  transform: scale(1.1);
+}
+.summary_image{
+  width: 100%;
+  max-height:500px;
+}
+
+.profile{
+  margin-top : 80px;
+  text-align: center;
+}
+
+section{
+  min-height: 600px;
+}
+
+.avatar{
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.profile-box{
+  margin: 0 auto;
+  width: 80%;
+  background-color: rgba(185, 179, 116, 0.425);
+  padding: 20px 50px;
+  border-radius: 15px;
+  line-height:2em
+}
+
+.work-information h2{
+  text-align:center;
+}
+
+.left-contents{
+  width: 60%;
+  float: left;
+}
+.right-contents{
+  width: 40%;
+  float: right;
+}
+
+.contents-title,.contents-text{
+  background-color: rgba(224, 131, 131, 0.726);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.work-information-image{
+  width: 90%;
+}
+
+.aside-infomation h2{
+  text-align:center;
+}
+
+.meta-information{
+  width: 100%;
+  height: 300px;
+  text-align:center;
+}
+.meta-btn{
+  width: 60%;
+  padding: 10px;
+  margin:10px auto;
+  display: block;
+  text-align:center;
+  background-color: #ffd280;
+  border-radius: 10px;
+}
+
+.form{
+  text-align:center;
+}
+
+.field input{
+  margin: 10px auto 30px;
+  display: block;
+  width: 500px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+  border: 1px solid rgb(85, 150, 255)
+}
+
+.actions input{
+  width: 60%;
+  padding: 10px;
+  margin:10px auto;
+  display: block;
+  border: 1px solid #ffd280;
+  text-align:center;
+  background-color: #ffd280;
+  color: black;
+  border-radius: 10px;
+}
+
+.blog-logo-image{
+  width: 200px;
+}
+
+.blog-page-image{
+  width: 80%;
+  margin:30px auto;
+}
+
+.blog-information{
+  padding: 0;
+  text-align:center;
+  margin:0 auto;
+}
+.blog-title{
+  font-size: 40px;
+  font-style: italic;
+  display: block
+}
+
+.twitter{
+  margin:0 auto;
+  width: 60%;
+}
+
+
+footer{
+  min-height: 80px;
+}
+
+.tags{
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.tag{
+  display: inline-block;
+  /* width: 50%; */
+  border-radius: 15px;
+  border: 1px solid  black;
+  background-color: rgba(224, 131, 131, 0.726);
+  padding: 5px 15px;
+  margin: 3px;
+}
+
+.tag-left{
+  float: left;
+  border-right: 1px solid black;
+  padding-right: 5px;
+}
+
+.tag-right{
+  padding-left: 5px;
+
+  color: white;
+}
+
+
+
+.tweets-best{
+  margin:0 auto;
+  width: 100%;
+  /* text-align:center; */
+}
+.tweet-best{
+  margin-bottom: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.tweet-box-best{
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.tweet-box-best h4{
+  color: rgb(255, 190, 116);
+  font-size: 2em;
+}
+.tweet-box-best p{
+  color: rgb(248, 222, 192);
+  line-height: 1.5em;
+}
+.best_image{
+  max-height:400px;
+  max-width: 90%;
+}
+
+.bg-fixed-image{
+  background-image: url("bg-profile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.clearfix{
+  clear: both;
+}
+
+.link-btn{
+  border: 1px solid rgb(255, 190, 116);
+  color: rgb(255, 190, 116);
+  padding: 5px 20px;
+}
+
+.skills{
+  width: 100%;
+}
+.skill{
+  width: 25%;
+  max-height: 25%;
+  float: left;
+  position: relative;
+  text-align:center;
+  padding: 30px;
+}
+.skill-image{
+  border-radius: 50%;
+  padding: 15px;
+  width: 100%;
+  background-color: white;
+}
+
+.image-rotate:hover{
+  transform: scale(1.2) rotate(2880deg);
+  transition: 0.5s;
+}
+
+.skill img{
+  margin:0;
+  width: 100%;
+  height: auto;
+
+}
+/* 
+.skill-mask{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color:rgba(0,0,0,0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.5s ease;
+}
+
+.skill:hover .skill-mask {
+  opacity: 1;
+}
+*/
+.skill-caption{
+  margin: 15px auto;
+  font-size: 2em;
+  text-align: center;
+  color: #000;
+}

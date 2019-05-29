@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Works List</h1>
+  <div class="tweets">
+    <% @tweets.each do |tweet| %>
+      <a href="/tweets/<%= tweet.id %>">
+        <%= render partial: "tweet", locals: {tweet: tweet} %>
+      </a>
+    <% end %>
+    <%= paginate(@tweets)%>
+  </div>
+</div>
