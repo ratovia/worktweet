@@ -7,7 +7,7 @@
       <h4><%= tweet.title %></h4>
       <p><%= tweet.contents %></p>
       <%= link_to "詳細", "/tweets/#{tweet.id}",class: "link-btn" %>
-      <%= link_to "サイトに行く", "/",class: "link-btn" unless tweet.site_url.nil? %>
+      <%= link_to "サイトに行く", tweet.site_url,class: "link-btn" unless tweet.site_url.nil? %>
     </div>
     <div class="clearfix"></div>
   </div>

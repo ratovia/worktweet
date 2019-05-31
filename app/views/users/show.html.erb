@@ -2,13 +2,9 @@
   <div class="container">
     <%= image_tag("profile.jpg", class: "avatar image-rotate")  %>
     <div class="profile-box">
-      <%# <%= simple_format "古城戸隆志" %>
+      <%= simple_format "古城戸隆志" %>
       <% text = "元インフラエンジニア 4月に退職。WebエンジニアになるためTech::Expertで５月から勉強中。大阪53期生です。心を和やかにするWebサービスを提供します。 スキル：HTML/CSS, Ruby, Ruby on Rails 趣味：ワイン 人生最終目標：ワインとプログラミングを掛け合わせる" %>
       <%= simple_format text %>
-      <%= Tweet.tweet_countB %>
-      <%= Tweet.count %>
-      <%= Tweet.all.length %>
-      <%= @tweets.length %>
     </div>
   </div>
 </section>

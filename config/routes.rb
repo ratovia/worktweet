@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   root 'welcome#index'
+  get 'welcome/portfolio'
 
   # get 'users/:id' => 'users#show'
   # get 'tweets' => 'tweets#index'

@@ -157,10 +157,16 @@ section{
   float: right;
 }
 
-.contents-title,.contents-text{
-  background-color: rgba(224, 131, 131, 0.726);
+.contents-title,.contents-text,.site-btn{
+  background-color: rgba(255, 0, 0, 0.383);
   border-radius: 10px;
   padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+.site-btn{
+  background-color: rgba(0, 11, 224, 0.383);
 }
 
 .work-information-image{
@@ -252,24 +258,24 @@ footer{
 
 .tag{
   display: inline-block;
-  /* width: 50%; */
-  border-radius: 15px;
   border: 1px solid  black;
-  background-color: rgba(224, 131, 131, 0.726);
-  padding: 5px 15px;
+  background-color: rgba(112, 112, 112, 0.383);
   margin: 3px;
 }
 
 .tag-left{
   float: left;
-  border-right: 1px solid black;
-  padding-right: 5px;
+  /* border-right: 1px solid black; */
+  background-color: rgba(255, 0, 0, 0.383);
+  padding: 10px 20px;
+  line-height: 20px;
 }
 
 .tag-right{
-  padding-left: 5px;
-
+  float: right;
   color: white;
+  padding: 10px 20px;
+  line-height: 20px;
 }
 
 

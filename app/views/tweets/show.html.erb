@@ -1,4 +1,4 @@
-<section class="work-information">
+<section class="work-information bg-fixed-image">
   <div class="container">
     <h2>作品情報</h2>
     <div class="left-contents">
@@ -6,8 +6,7 @@
       <div class="tags">
         <% @tweet.skills.each do |skill|%>
           <div class="tag">
-            <span class="tag
-            -left">
+            <span class="tag-left">
               使用スキル
             </span>
             <span class="tag-right">
@@ -21,10 +20,10 @@
       <h2 class="contents-title"><%= @tweet.title%></h2>
       <p>公開日 : <%= @tweet.metadata.to_s.split.first %></p>
       <%= simple_format @tweet.contents ,class: "contents-text"%>
+      <%= link_to "ε=ε=ε=ε=ε=ε=┌(^v^)┘サイトに行く", @tweet.site_url, class: "site-btn" unless @tweet.site_url.nil? %>
     </div>
   </div>
 </section>
-<hr>
 <section class="aside-infomation">
   <div class="container">
     <div class="left-contents">
